@@ -181,7 +181,7 @@ const tick = () =>
 }
 const setAngle = async () => {
     let myDate = new Date();
-    myDate.setHours( myDate.getHours()+6+3);
+    myDate.setHours( myDate.getHours());
     let t = await suncal.getPosition(/*Date*/ myDate, /*Number*/ 40.730, /*Number*/ -73.93)
     X = -Math.round( 4 * ( Math.cos( t.altitude ) * Math.sin( t.azimuth ) ) );
     Y = Math.round( 4 * ( Math.cos( t.altitude ) * Math.cos( t.azimuth ) ) );
